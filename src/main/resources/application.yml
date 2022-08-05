@@ -1,0 +1,24 @@
+spring:
+  datasource:
+    type: com.alibaba.druid.pool.DruidDataSource
+    druid:
+      driver-class-name: com.mysql.cj.jdbc.Driver
+      url: jdbc:mysql://localhost:3306/gulimall_pms?useUnicode=true&characterEncoding=UTF-8&serverTimezone=Asia/Shanghai
+      username: root
+      password: 123456
+
+mybatis-plus:
+  mapper-locations:
+    - classpath:/mapper/**/*.xml
+  global-config:
+    db-config:
+      id-type: auto
+      logic-delete-value: 0
+      logic-not-delete-value: 1
+      #logic-delete-field: showStatus
+      #在配置的时候 添加这个 就可以不用额外的 在实体类字段上添加 @TableLogic注解了
+product:
+  name: zzc6782
+logging:
+  level:
+    com.atguigu.gulimall: debug
